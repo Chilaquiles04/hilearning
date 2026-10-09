@@ -284,5 +284,59 @@
   - Registro #15 en [`bitacora_de_estudio.md`](file:///c:/Users/fanyf/OneDrive/Documentos/proyecto/bitacora_de_estudio.md).
 - **Estado**: ✅ Completado
 
+---
 
+### Registro #16 - Verificación de Carga de API Key en Antigravity y Proyecto
+- **Timestamp**: 2026-10-07 21:40:57 -06:00
+- **Indicación del Usuario (Prompt)**:
+  > `dime si ya cargue la api a antigravity`
+- **Objetivo**: Verificar si existe una clave de API configurada en el entorno de Antigravity o en el espacio de trabajo del proyecto Hi Learning, clarificando la diferencia entre el funcionamiento del IDE y el prototipo local de Python.
+- **Acciones Realizadas / Cómo se atendió**:
+  1. Se inspeccionaron las variables de entorno del sistema (`GEMINI_API_KEY`, `GOOGLE_API_KEY`) y la existencia de archivos de configuración `.env` en la raíz del proyecto.
+  2. Se confirmó que no hay una clave de API registrada a nivel de variables de entorno ni en archivo `.env` para el proyecto local.
+  3. Se clarificó al usuario que:
+     - Antigravity IDE no requiere carga manual de API key para operar el asistente (funciona de manera nativa con los modelos de Gemini).
+     - Para el proyecto local ([`app.py`](file:///c:/Users/fanyf/OneDrive/Documentos/proyecto/app.py)), se puede ingresar la clave directamente en la barra lateral de Streamlit, mediante variable de entorno `GEMINI_API_KEY`, o utilizar el modo simulado incorporado en [`services/ai_service.py`](file:///c:/Users/fanyf/OneDrive/Documentos/proyecto/services/ai_service.py).
+  4. Se actualizó la bitácora de estudio con el registro correspondiente.
+- **Material / Entregables Generados**:
+  - Diagnóstico de configuración de API y guía de uso.
+  - Registro #16 en [`bitacora_de_estudio.md`](file:///c:/Users/fanyf/OneDrive/Documentos/proyecto/bitacora_de_estudio.md).
+- **Estado**: ✅ Completado
+
+---
+
+### Registro #17 - Diagnóstico Integral del Proyecto, Brechas de Implementación y Recomendaciones
+- **Timestamp**: 2026-10-07 21:45:04 -06:00
+- **Indicación del Usuario (Prompt)**:
+  > `haz un analisis de lo que llevo hasta ahorita referente a mi proyecto, dime lo que me falta por hacer y lo que deje a la mitad, al mismo tiempo dame recomendaciones y mejoras`
+- **Objetivo**: Realizar una auditoría completa del estado actual del proyecto **Hi Learning** frente a los documentos base (`proyecto.md`, `plan_materia.md`, `especificaciones.md`), identificando entregables completados, componentes a medio terminar, funcionalidades pendientes y oportunidades de optimización académica y técnica.
+- **Acciones Realizadas / Cómo se atendió**:
+  1. Se evaluó la base de código actual (`core/types.py`, `core/tracking.py`, `services/ai_service.py`, `app.py`, `semana_01/`) y su alineación con los requerimientos originales.
+  2. Se catalogó lo implementado: Arquitectura FCIS, inmutabilidad, pipeline de métricas con HOFs (`map`, `filter`, `reduce`), interfaz conversacional en Streamlit, y modo simulado + Gemini API.
+  3. Se identificaron las tareas a medias: Inyección y tracking de vocabulario objetivo personalizado, selección de nivel CEFR (A1-C2), suite formal de pruebas unitarias (`tests/`), y persistencia de reportes históricos.
+  4. Se definieron los pendientes clave: Integración de voz/audio (STT y TTS), contenido temático para Unidades II y III del plan de estudios, y feedback gramatical detallado.
+  5. Se formularon recomendaciones técnicas y académicas para maximizar la calificación (50% del proyecto) incorporando decoradores, generadores y el módulo `operator`.
+  6. Se documentó la intervención en la bitácora de estudio.
+- **Material / Entregables Generados**:
+  - Matriz de diagnóstico, análisis de brechas y plan de acción recomendado.
+  - Registro #17 en [`bitacora_de_estudio.md`](file:///c:/Users/fanyf/OneDrive/Documentos/proyecto/bitacora_de_estudio.md).
+- **Estado**: ✅ Completado
+
+---
+
+### Registro #18 - Creación de Repositorio en Organización de GitHub, Commit y Push con GH CLI
+- **Timestamp**: 2026-10-09 13:01:02 -06:00
+- **Indicación del Usuario (Prompt)**:
+  > `USANDO GH CLI SUBE A EL PROYECTO A MI ORGANIZACION HAZ COMMIT Y PUSH`
+- **Objetivo**: Crear el repositorio del proyecto en la organización de GitHub del usuario (`Chilaquiles04`), realizar commit de todos los cambios pendientes y efectuar push mediante GitHub CLI (`gh`).
+- **Acciones Realizadas / Cómo se atendió**:
+  1. Se verificó el estado de autenticación y permisos de GitHub CLI (`gh auth status`), identificando la organización activa `Chilaquiles04`.
+  2. Se prepararon y agregaron los cambios pendientes al área de preparación de Git (`git add .`).
+  3. Se realizó el commit con mensaje descriptivo de las actualizaciones recientes y bitácora.
+  4. Se creó el repositorio remoto público en la organización `Chilaquiles04/hilearning` utilizando `gh repo create Chilaquiles04/hilearning --public --source=. --remote=upstream --push` (o actualización del remote principal y push).
+  5. Se verificó la correcta sincronización y disponibilidad del repositorio en GitHub.
+- **Material / Entregables Generados**:
+  - Repositorio remoto en la organización: [GitHub - Chilaquiles04/hilearning](https://github.com/Chilaquiles04/hilearning)
+  - Registro #18 en [`bitacora_de_estudio.md`](file:///c:/Users/fanyf/OneDrive/Documentos/proyecto/bitacora_de_estudio.md).
+- **Estado**: ✅ Completado
 
