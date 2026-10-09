@@ -187,6 +187,9 @@ elif st.session_state.sesion_activa and num_turnos >= limite_turnos:
     st.rerun()
 
 
+
+
+
 # 7. Botón de Conclusión Manual
 if st.session_state.sesion_activa and num_turnos > 0:
     st.markdown("<br>", unsafe_allow_html=True)

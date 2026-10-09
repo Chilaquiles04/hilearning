@@ -41,6 +41,7 @@ print(f"Sesión sobre '{tema_conversacion}' iniciada para nivel {nivel_estudiant
 | **Diccionarios `{}`** | Mutable | Payloads JSON recibidos desde el frontend. |
 | **Sets `{}`** | Mutable (único) | Lista de vocabulario objetivo para búsquedas instantáneas $O(1)$. |
 
+
 ```python
 # Vocabulario objetivo como un Set (conjunto inmutable de palabras clave únicas)
 target_vocab: set[str] = {"experience", "skills", "teamwork", "leadership"}
